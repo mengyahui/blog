@@ -31,7 +31,6 @@
 
 - REST(Representational State Transfer)：这是一种 HTTP 调用的格式，更标准，更通用，无论哪种语言都支持HTTP 协议。
 - RPC（Remote Promote Call）：一种进程间通信方式。允许像调用本地服务一样调用远程服务。RPC 框架的主要目标就是让远程服务调用更简单、透明。RPC 框架负责屏蔽底层的传输方式、序列化方式和通信细节。开发人员在使用的时候只需要了解谁在什么位置提供了什么样的远程服务接口即可，并不需要关心底层通信细节和调用过程。
-  
 
 #### 3.3 服务网关
 
@@ -67,7 +66,7 @@ SpringCloud 并没有重复造轮子，而是对现有的技术进行封装和�
 
 SpringCloud 的组件以 Netflix 开源的组件为主，随着部分组件的停止维护，SpringCloud 也推出了一些替代的新组件，下图给出了 SpringCloud 的一些核心组件：
 
-![image.png](assets/1685883366667-3b848f38-7c99-4e45-9e9c-d8b39329b00f-16862783747342.png)
+![1685883366667-3b848f38-7c99-4e45-9e9c-d8b39329b00f-16862783747342](https://cdn.jsdelivr.net/gh/mengyahui/image-repository@master/springcloud/1685883366667-3b848f38-7c99-4e45-9e9c-d8b39329b00f-16862783747342.6rp5qjzgkpc0.webp)
 
 ## 5-SpringCloud Alibaba
 
