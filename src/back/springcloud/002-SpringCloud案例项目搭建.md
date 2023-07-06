@@ -20,17 +20,17 @@ Maven：3.8.4
 
 ```sql
 CREATE TABLE ums_user(
-   id                   bigint NOT NULL auto_increment comment '自增主键',
-   username             varchar(64) NOT NULL comment '用户名',
-   password             varchar(64) NOT NULL comment '密码',
-   nickname             varchar(64) NULL DEFAULT NULL comment '昵称',
-   mobile               varchar(20) NULL DEFAULT NULL comment '手机号码',
-   email                varchar(64) NULL DEFAULT NULL comment '邮箱',
-   avatar               varchar(500) NULL DEFAULT NULL comment '头像',
-   status               tinyint(4) NOT NULL DEFAULT 1 comment '启用状态[1-启用,0-禁用]',
-   create_time          datetime NULL DEFAULT NULL comment '注册时间',
-   is_deleted			tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
-   PRIMARY KEY (id)
+    id                 bigint NOT NULL auto_increment comment '自增主键',
+    username           varchar(64) NOT NULL comment '用户名',
+    password           varchar(64) NOT NULL comment '密码',
+    nickname           varchar(64) NULL DEFAULT NULL comment '昵称',
+    mobile             varchar(20) NULL DEFAULT NULL comment '手机号码',
+    email              varchar(64) NULL DEFAULT NULL comment '邮箱',
+    avatar             varchar(500) NULL DEFAULT NULL comment '头像',
+    status             tinyint(4) NOT NULL DEFAULT 1 comment '启用状态[1-启用,0-禁用]',
+    create_time        datetime NULL DEFAULT NULL comment '注册时间',
+    is_deleted         tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
+    PRIMARY KEY (id)
 );
 ```
 
@@ -40,12 +40,12 @@ CREATE TABLE ums_user(
 
 ```sql
 CREATE TABLE pms_product(
-    id          		bigint NOT NULL auto_increment comment '自增主键',
-    name        		varchar(64) NOT NULL comment '商品名称',
-    price      	 		varchar(20) NOT NULL comment '商品价格',
-    status      		tinyint(4) NOT NULL DEFAULT 1 comment '上架状态[1-已上架,0-下架]',
-    goods_desc  		varchar(100) NULL DEFAULT NULL comment '商品详情',
-    is_deleted			tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
+    id          	      bigint NOT NULL auto_increment comment '自增主键',
+    name        	      varchar(64) NOT NULL comment '商品名称',
+    price      	 	      varchar(20) NOT NULL comment '商品价格',
+    status      	      tinyint(4) NOT NULL DEFAULT 1 comment '上架状态[1-已上架,0-下架]',
+    goods_desc  	      varchar(100) NULL DEFAULT NULL comment '商品详情',
+    is_deleted		      tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
     PRIMARY KEY (id)
 );
 ```
@@ -56,17 +56,17 @@ CREATE TABLE pms_product(
 
 ```sql
 CREATE TABLE oms_order(
-  	id 					bigint(20) NOT NULL auto_increment comment '自增主键',
-  	user_id 			bigint(20) NULL DEFAULT NULL COMMENT '用户id',
-  	order_no 			char(32) NULL DEFAULT NULL COMMENT '订单号',
-  	create_time 		datetime NULL DEFAULT NULL COMMENT '订单创建时间',
-  	total_amount 		varchar(20) NULL DEFAULT NULL COMMENT '订单总额',
-    note 				varchar(500) NULL DEFAULT NULL COMMENT '订单备注',
-    receiver_name 		varchar(100) NULL DEFAULT NULL COMMENT '收货人姓名',
-  	receiver_phone 		varchar(32) NULL DEFAULT NULL COMMENT '收货人电话',
-    status 				tinyint(4) NULL DEFAULT NULL COMMENT '订单状态[1-已发货,3-已完成]',
-    is_deleted			tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
-  	PRIMARY KEY (id)
+    id                  bigint(20) NOT NULL auto_increment comment '自增主键',
+    user_id             bigint(20) NULL DEFAULT NULL COMMENT '用户id',
+    order_no            char(32) NULL DEFAULT NULL COMMENT '订单号',
+    create_time         datetime NULL DEFAULT NULL COMMENT '订单创建时间',
+    total_amount        varchar(20) NULL DEFAULT NULL COMMENT '订单总额',
+    note                varchar(500) NULL DEFAULT NULL COMMENT '订单备注',
+    receiver_name       varchar(100) NULL DEFAULT NULL COMMENT '收货人姓名',
+    receiver_phone      varchar(32) NULL DEFAULT NULL COMMENT '收货人电话',
+    status              tinyint(4) NULL DEFAULT NULL COMMENT '订单状态[1-已发货,3-已完成]',
+    is_deleted          tinyint(4) NOT NULL DEFAULT 1 comment '删除标志[1-未删除,0-已删除]',
+    PRIMARY KEY (id)
 );
 ```
 
@@ -93,7 +93,8 @@ mall				    # 聚合服务
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mall</groupId>
@@ -192,7 +193,8 @@ mall				    # 聚合服务
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mall</groupId>
@@ -219,7 +221,8 @@ mall				    # 聚合服务
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mall-common</artifactId>
@@ -246,7 +249,8 @@ mall				    # 聚合服务
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -286,7 +290,8 @@ mall				    # 聚合服务
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mall</groupId>
