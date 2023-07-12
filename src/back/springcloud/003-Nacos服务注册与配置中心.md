@@ -81,8 +81,9 @@ spring:
 
 此时，只需要在各个服务的启动类或配置类上加上 `@EnableDiscoveryClient` 注解用于开启服务注册与发现的支持，服务就可以注册到 Nacos，但经过实际测试不加 `@EnableDiscoveryClient` 注解，服务也能注册到 Nacos。
 
-> 在配置 `spring.application.name` 和 `spring.cloud.nacos.server-addr` 的前提下，可以不配置 `spring.cloud.nacos.service` 和 `spring.cloud.nacos.discovery`。
-
+::: tip
+在配置 `spring.application.name` 和 `spring.cloud.nacos.server-addr` 的前提下，可以不配置 `spring.cloud.nacos.service` 和 `spring.cloud.nacos.discovery`。
+:::
 ### 3.3 Nacos 领域模型
 
 **Nacos 领域模型描述了服务与实例之间的边界和层级关系。**Nacos 的服务领域模型是以**服务**为维度构建起来的，这个服务并不是指集群中的单个服务器，而是指微服务的服务名。**服务**是 Nacos 中位于最上层的概念，在服务之下，还有**集群**和**实例**的概念。
