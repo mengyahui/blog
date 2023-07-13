@@ -6,7 +6,7 @@
 
 ## 1-HelloWorld 创建
 
-首先，使用 IDEA 创建一个不适用模板的 Maven 项目
+首先，使用 IDEA 创建一个不使用模板的 Maven 项目
 
 ![image-20230712124721077](https://cdn.jsdelivr.net/gh/mengyahui/image-repository@master/springboot/image-20230712124721077.23yyaugy74io.png)
 
