@@ -1,6 +1,6 @@
 # 002-HelloWorld解析
 
-对于创建 SpringBoot 项目，Spring 官方提供了 Spring Initializr，地址为：https://start.spring.io/，我们可以将从 Spring Initializr 创建的 SpringBoot 项目下载下来，导入到 IDEA 中。此外，IDEA 中也集成了 Spring Initializr，通常创建项目都是使用 IDEA 中的 Spring Initializr。
+对于创建 SpringBoot 项目，Spring 官方提供了 Spring Initializr，地址为：https://start.spring.io/ ，我们可以将从 Spring Initializr 创建的 SpringBoot 项目下载下来，导入到 IDEA 中。此外，IDEA 中也集成了 Spring Initializr，通常创建项目都是使用 IDEA 中的 Spring Initializr。
 
 除了使用 Spring Initializr 来创建 SpringBoot 项目，还可以创建一个 Maven 项目，然后手动导入 SpringBoot 项目所需的依赖。下面就以这种方式创建一个 HelloWorld 项目。
 
