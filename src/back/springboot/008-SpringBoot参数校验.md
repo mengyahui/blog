@@ -1,3 +1,4 @@
+# 008-SpringBoot参数校验
 ## 1-为什么要进行参数校验？
 
 通常来说，前端在发送请求时也会进行参数校验。但是为了避免用户绕过客户端，使用 HTTP 工具直接向后端请求一些违法数据，服务端的数据校验也是不能忽视的。
@@ -28,26 +29,26 @@
 下面是常用校验注解：
 
 - Bean Validation 中内置的 constraint（约束）    
-  - @Null  被注释的元素必须为 null
-  - @NotNull  被注释的元素必须不为 null
-  - @AssertTrue   被注释的元素必须为 true
-  - @AssertFalse  被注释的元素必须为 false
-  - @Min(value)   被注释的元素必须是一个数字，其值必须大于等于指定的最小值 
-  - @Max(value)   被注释的元素必须是一个数字，其值必须小于等于指定的最大值 
-  - @DecimalMin(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 
-  - @DecimalMax(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 
-  - @Size(max=, min=)  被注释的元素的大小必须在指定的范围内 
-  - @Digits (integer, fraction)   被注释的元素必须是一个数字，其值必须在可接受的范围内 
-  - @Past  被注释的元素必须是一个过去的日期 
-  - @Future   被注释的元素必须是一个将来的日期 
-  - @Pattern(regex=,flag=) 被注释的元素必须符合指定的正则表达式 
+  - `@Null`  被注释的元素必须为 null
+  - `@NotNull`  被注释的元素必须不为 null
+  - `@AssertTrue`   被注释的元素必须为 true
+  - `@AssertFalse`  被注释的元素必须为 false
+  - `@Min(value)`  被注释的元素必须是一个数字，其值必须大于等于指定的最小值 
+  - `@Max(value)`   被注释的元素必须是一个数字，其值必须小于等于指定的最大值 
+  - `@DecimalMin(value)` 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 
+  - `@DecimalMax(value)` 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 
+  - `@Size(max=, min=)`  被注释的元素的大小必须在指定的范围内 
+  - `@Digits(integer, fraction)`   被注释的元素必须是一个数字，其值必须在可接受的范围内 
+  - `@Past`  被注释的元素必须是一个过去的日期 
+  - `@Future`   被注释的元素必须是一个将来的日期 
+  - `@Pattern(regex=,flag=)` 被注释的元素必须符合指定的正则表达式 
 - Hibernate Validator 附加的 constraint 
-  - @NotBlank(message =)  字符串不能为null,字符串trim()后也不能等于“”
-  - @Email 被注释的元素必须是电子邮箱地址 
-  - @Length(min=,max=) 被注释的字符串的大小必须在指定的范围内 
-  - @NotEmpty  不能为null，集合、数组、map等size()不能为0；字符串trim()后可以等于“”
-  - @Range(min=,max=,message=) 被注释的元素必须在合适的范围内
-  - @URL 被注释的元素必须是一个URL
+  - `@NotBlank(message =)`  字符串不能为null,字符串trim()后也不能等于“”
+  - `@Email` 被注释的元素必须是电子邮箱地址 
+  - `@Length(min=,max=)` 被注释的字符串的大小必须在指定的范围内 
+  - `@NotEmpty`  不能为null，集合、数组、map等size()不能为0；字符串trim()后可以等于“”
+  - `@Range(min=,max=,message=)` 被注释的元素必须在合适的范围内
+  - `@URL` 被注释的元素必须是一个URL
 
 ##  4-异常说明
 
